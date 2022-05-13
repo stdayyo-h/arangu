@@ -22,19 +22,7 @@ class _AddEventState extends State<AddEvent> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [
-          Heading(title: "Add An Event"),
-          ElevatedButton(
-            child: Text("Get"),
-            onPressed: () async {
-              print("Response");
-              final response = await getAllEvents();
-              final data = (json.decode(response.body));
-              // print(data['event_place']);
-              print(data);
-            },
-          )
-        ],
+        children: [],
       ),
     );
   }
