@@ -1,9 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.arangu">
+     <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="arangu"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <!-- Required to fetch data from the internet. -->
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
