@@ -1,5 +1,9 @@
 import 'package:arangu/screens/home/home.dart';
 import 'package:flutter/material.dart';
+import 'package:arangu/screens/games/games.dart';
+import 'package:arangu/screens/login/onboarding.dart';
+import 'package:arangu/screens/add_event.dart';
+import 'package:arangu/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const Home(),
+      home: const SplashScreen(),
     );
   }
 }
