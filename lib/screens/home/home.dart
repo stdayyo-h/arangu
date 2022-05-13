@@ -1,4 +1,5 @@
 import 'package:arangu/screens/add_event/add_event.dart';
+import 'package:arangu/screens/auth/Profile.dart';
 import 'package:arangu/screens/crafts/crafts.dart';
 import 'package:arangu/screens/events/events.dart';
 import 'package:arangu/screens/home/widgets/BottomNav.dart';
@@ -14,8 +15,8 @@ class Home extends StatelessWidget {
       TrendingEventsPage(),
       AddEvent(),
       SplashScreen(),
-      TrendingEventsPage(),
-      CraftsPage()
+      CraftsPage(),
+      ProfilePage()
     ];
     return Scaffold(
       body: SafeArea(
