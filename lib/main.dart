@@ -1,4 +1,5 @@
 import 'package:arangu/screens/home/home.dart';
+import 'package:arangu/screens/home/widgets/BottomNav.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Arangu',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const Home(),
+      home: Home(),
     );
   }
 }
