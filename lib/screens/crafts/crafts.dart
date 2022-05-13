@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:arangu/screens/crafts/CraftDetails.dart';
 import 'package:arangu/screens/events/widgets/EventCard.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -79,12 +80,22 @@ class _CraftsPageState extends State<CraftsPage> {
           return ListView.separated(
             separatorBuilder: (_, index) => Divider(),
             itemCount: snapshot.data!.length,
-            itemBuilder: (_, index) => Container(
-                child: EventCard(
-              name: "${snapshot.data![index].event_name}",
-              place: "${snapshot.data![index].event_place}",
-              imageUrl: "${snapshot.data![index].image}",
-            )),
+            itemBuilder: (_, index) => InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CraftDetails(),
+                        settings:
+                            RouteSettings(arguments: snapshot.data![index])));
+              },
+              child: Container(
+                  child: EventCard(
+                name: "${snapshot.data![index].event_name}",
+                place: "${snapshot.data![index].event_place}",
+                imageUrl: "${snapshot.data![index].image}",
+              )),
+            ),
           );
         } else {
           return Center(child: CircularProgressIndicator());
