@@ -6,7 +6,8 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <!-- Required to fetch data from the internet. -->
-
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyABahJfFoQmgVRD7hECkae16p79crL383g"/>
 
         <activity
             android:name=".MainActivity"

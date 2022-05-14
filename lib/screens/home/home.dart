@@ -7,6 +7,7 @@ import 'package:arangu/screens/events/events.dart';
 import 'package:arangu/screens/home/widgets/BottomNav.dart';
 import 'package:arangu/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:arangu/screens/Map/map.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,7 +16,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final _pages = [
       TrendingEventsPage(),
+
+      MapWidget(),
       ExploreScreen(),
+
       SplashScreen(),
       // CraftsPage(),
       GamesPage(),

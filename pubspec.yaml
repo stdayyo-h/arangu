@@ -3,7 +3,7 @@ description: arangu.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -33,7 +33,10 @@ dependencies:
   dio: ^4.0.6
   flutter:
     sdk: flutter
+
   fluttericon: ^2.0.0
+
+  google_maps_flutter: ^2.1.5
   http: ^0.13.4
   image_picker: ^0.7.2+1
   json_annotation: ^4.5.0
@@ -56,7 +59,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.
 flutter:
-  
   assets:
     - assets/images/Emoji.png
     - assets/images/google_logo.png
