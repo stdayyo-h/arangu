@@ -1,4 +1,5 @@
 import 'package:arangu/donations.dart';
+import 'package:arangu/screens/events/LatestTrendingEvents.dart';
 import 'package:arangu/screens/events/SwipeEventCard.dart';
 import 'package:arangu/screens/events/widgets/EventCard.dart';
 import 'package:arangu/screens/events/widgets/Title.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:fluttericon/typicons_icons.dart';
 import 'package:swipeable_card_stack/swipeable_card_stack.dart';
+import 'package:arangu/constants/colors.dart';
 
 // class TrendingEventsPage extends StatefulWidget {
 //   const TrendingEventsPage({Key? key}) : super(key: key);
@@ -98,42 +100,44 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
             )
           ],
         ),
+        LatestTrendingEventPage(),
         SizedBox(
           height: 10,
         ),
-        SwipeableCardsSection(
-            cardController: _cardController,
-            context: context,
-            items: [
-              SwipeEventCard(
-                  Height: 50,
-                  Width: 50,
-                  name: "Kathakali",
-                  place: "Kerala",
-                  imageUrl:
-                      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg"),
-              SwipeEventCard(
-                  Height: 50,
-                  Width: 50,
-                  name: "Kathakali",
-                  place: "Kerala",
-                  imageUrl:
-                      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg"),
-              SwipeEventCard(
-                  Height: 50,
-                  Width: 50,
-                  name: "Kathakali",
-                  place: "Kerala",
-                  imageUrl:
-                      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg"),
-              SwipeEventCard(
-                  Height: 50,
-                  Width: 50,
-                  name: "Kathakali",
-                  place: "Kerala",
-                  imageUrl:
-                      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg")
-            ]),
+        // SwipeableCardsSection(
+        //     cardController: _cardController,
+        //     context: context,
+        //     items: [
+        //       SwipeEventCard(
+        //           Height: 50,
+        //           Width: 50,
+        //           name: "Kathakali",
+        //           place: "Kerala",
+        //           imageUrl:
+        //               "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg"),
+        //       SwipeEventCard(
+        //           Height: 50,
+        //           Width: 50,
+        //           name: "Kathakali",
+        //           place: "Kerala",
+        //           imageUrl:
+        //               "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg"),
+        //       SwipeEventCard(
+        //           Height: 50,
+        //           Width: 50,
+        //           name: "Kathakali",
+        //           place: "Kerala",
+        //           imageUrl:
+        //               "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg"),
+        //       SwipeEventCard(
+        //           Height: 50,
+        //           Width: 50,
+        //           name: "Kathakali",
+        //           place: "Kerala",
+        //           imageUrl:
+        //               "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg")
+        //     ]),
+
         Container(
           height: 200,
           color: Colors.grey[700],
