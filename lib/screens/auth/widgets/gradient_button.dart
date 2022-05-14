@@ -1,43 +1,36 @@
-import 'package:arangu/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class LoginButton extends StatelessWidget {
-  // const LoginButton({ Key? key }) : super(key: key);
+import '../../../constants/colors.dart';
 
+class GradientButon extends StatelessWidget {
   final Function() onPressed;
-  final String text, image;
-  const LoginButton({
-    required this.image,
-    required this.text,
+  final String text;
+  const GradientButon({
+    Key? key,
     required this.onPressed,
-  });
+    required this.text,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        constraints: BoxConstraints(maxWidth: 200.0, minHeight: 50.0),
+        constraints: BoxConstraints(maxWidth: 350.0, minHeight: 35.0),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           gradient: kbuttonGradient,
-          borderRadius: BorderRadius.circular(80.0),
+          //borderRadius: BorderRadius.circular(80.0),
           boxShadow: [
             kLoginButtonBoxShadow,
           ],
         ),
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(
-              width: 20,
-              height: 20,
-              image: AssetImage(
-                image,
-              ),
-            ),
             Text(
-              text,
+              '$text',
               style: TextStyle(color: Colors.white),
             ),
           ],
