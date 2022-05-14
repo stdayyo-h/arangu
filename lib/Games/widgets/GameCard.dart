@@ -37,7 +37,7 @@ class GameCard extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 height: 100,
-                child: Image.network(
+                child: Image.asset(
                   img,
                   fit: BoxFit.fill,
                 ),

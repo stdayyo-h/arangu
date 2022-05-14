@@ -77,12 +77,9 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
 
     return Column(
       children: [
-        SizedBox(
-          height: 10,
-        ),
         Text(
           'Trending Events',
-          style: kHeader1TextStyle,
+          style: kHeaderTextStyle,
         ),
         // Heading(title: "Trending Events"
         // ),

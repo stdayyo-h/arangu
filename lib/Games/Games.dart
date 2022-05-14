@@ -59,20 +59,17 @@ class GamesPage extends StatelessWidget {
             ),
             GameCard(
                 text: 'Visual crossword',
-                img:
-                    'https://linguapress.com/puzzles/answers/s194-xwd-art_answers.gif',
+                img: 'assets/images/game1.png',
                 para: 'new game',
                 color: 0xff5AC671),
             GameCard(
                 text: 'Visual crossword',
-                img:
-                    'https://linguapress.com/puzzles/answers/s194-xwd-art_answers.gif',
+                img: 'assets/images/game2.png',
                 para: 'new game',
                 color: 0xffFF61A3),
             GameCard(
                 text: 'Visual crossword',
-                img:
-                    'https://linguapress.com/puzzles/answers/s194-xwd-art_answers.gif',
+                img: 'assets/images/game3.png',
                 para: 'new game',
                 color: 0xffE3B337),
           ]),
