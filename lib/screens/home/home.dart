@@ -16,10 +16,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final _pages = [
       TrendingEventsPage(),
-      MapWidget(),
+
       ExploreScreen(),
-      // GamesPage(),
-      CraftsPage(),
+      MapWidget(),
+      GamesPage(),
+      // CraftsPage(),
+
       ProfilePage()
     ];
     return Scaffold(
