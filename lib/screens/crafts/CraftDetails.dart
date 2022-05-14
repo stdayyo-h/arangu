@@ -40,22 +40,22 @@ class CraftDetails extends StatelessWidget {
                     ),
                     Text("${todo.event_description}",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w200)),
+                            fontSize: 10, fontWeight: FontWeight.w200)),
                     SizedBox(
                       height: 10,
                     ),
                     Center(
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 10),
-                        width: 300,
-                        height: 150,
-                        child: Image.network(
-                            "http://www.arablog.co/wp-content/uploads/2017/01/gmapsjs-marker-map-1338661211_full550.png"),
-                        // child: MapCardWidget(
-                        //   name: "${todo.event_name}",
-                        //   latitude: todo.latitude!.toDouble(),
-                        //   longitude: todo.longitude!.toDouble(),
-                        // ),
+                        width: 400,
+                        height: 500,
+                        // child: Image.network(
+                        //     "http://www.arablog.co/wp-content/uploads/2017/01/gmapsjs-marker-map-1338661211_full550.png")
+                        child: MapCardWidget(
+                          name: "${todo.event_name}",
+                          latitude: todo.latitude!.toDouble(),
+                          longitude: todo.longitude!.toDouble(),
+                        ),
                       ),
                     ),
                     SizedBox(
