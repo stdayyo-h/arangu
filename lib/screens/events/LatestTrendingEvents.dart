@@ -6,6 +6,8 @@ import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
 
+import '../crafts/CraftDetails.dart';
+
 List<LatestTrendingEvents> craftFromJson(String str) =>
     List<LatestTrendingEvents>.from(
         json.decode(str).map((x) => LatestTrendingEvents.fromMap(x)));
@@ -43,7 +45,7 @@ class LatestTrendingEvents {
 }
 
 Future<List<LatestTrendingEvents>> fetchSuggestedEvents() async {
-  final url = '${constants.BaseUrl}/events/all';
+  final url = '${constants.BaseUrl}/events/all/';
   final response = await http.get(Uri.parse("${url}"));
 
   if (response.statusCode == 200) {
@@ -85,21 +87,33 @@ class _SuggestedEventSectionMLState extends State<LatestTrendingEventPage> {
           return SizedBox(
             width: MediaQuery.of(context).size.width,
             height: 300,
-            child: GridView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: snapshot.data!.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: .90,
-                    mainAxisSpacing: 10,
-                    crossAxisSpacing: 3),
-                itemBuilder: (context, index) {
-                  return LatestEventCard(
-                    name: "${snapshot.data![index].event_name}",
-                    place: "${snapshot.data![index].event_place}",
-                    imageUrl: "${snapshot.data![index].image}",
-                  );
-                }),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.separated(
+                  separatorBuilder: (BuildContext context, int index) =>
+                      const SizedBox(
+                        width: 10,
+                      ),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: snapshot.data!.length,
+                  itemBuilder: (context, index) {
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const EventDetails(),
+                                settings: RouteSettings(
+                                    arguments: snapshot.data![index])));
+                      },
+                      child: LatestEventCard(
+                        name: "${snapshot.data![index].event_name}",
+                        place: "${snapshot.data![index].event_place}",
+                        imageUrl: "${snapshot.data![index].image}",
+                      ),
+                    );
+                  }),
+            ),
           );
         } else {
           return Center(child: CircularProgressIndicator());

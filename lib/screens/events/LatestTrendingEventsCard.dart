@@ -29,8 +29,8 @@ class LatestEventCard extends StatelessWidget {
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
           ),
-          left: 10,
-          bottom: 45,
+          left: 15,
+          bottom: 60,
         ),
         Positioned(
           child: Text(
@@ -40,8 +40,8 @@ class LatestEventCard extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 color: Color(0xFFC1D9A3)),
           ),
-          left: 10,
-          bottom: 30,
+          left: 15,
+          bottom: 40,
         )
       ],
     );

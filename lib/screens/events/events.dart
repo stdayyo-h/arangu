@@ -101,9 +101,7 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
           ],
         ),
         LatestTrendingEventPage(),
-        SizedBox(
-          height: 10,
-        ),
+        Spacer(),
         // SwipeableCardsSection(
         //     cardController: _cardController,
         //     context: context,
