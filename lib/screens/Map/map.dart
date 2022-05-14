@@ -78,8 +78,8 @@ class _MapWidgetState extends State<MapWidget> {
       body: GoogleMap(
         onMapCreated: _onMapCreated,
         initialCameraPosition: const CameraPosition(
-          target: LatLng(0, 0),
-          zoom: 2,
+          target: LatLng(9.9816, 76.2999),
+          zoom: 7,
         ),
         markers: _markers.values.toSet(),
       ),

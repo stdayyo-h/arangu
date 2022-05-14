@@ -3,23 +3,29 @@ import 'package:arangu/screens/crafts/crafts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class MapWidget extends StatefulWidget {
-  const MapWidget({Key? key, required this.latitude, required this.longitude})
+class MapCardWidget extends StatefulWidget {
+  const MapCardWidget(
+      {Key? key,
+      required this.name,
+      required this.latitude,
+      required this.longitude})
       : super(key: key);
+  final String name;
   final double latitude;
+
   final double longitude;
   @override
-  _MapWidgetState createState() => _MapWidgetState();
+  _MapCardWidgetState createState() => _MapCardWidgetState();
 }
 
-class _MapWidgetState extends State<MapWidget> {
+class _MapCardWidgetState extends State<MapCardWidget> {
   final Map<String, Marker> _markers = {};
   late Future<List<Post>> future_events;
   var offices = <Map>[];
 
   Future<void> _onMapCreated(GoogleMapController controller) async {
     offices.add({
-      'name': 'Krishnanattam',
+      'name': widget.name,
       'latitude': widget.latitude,
       'longitude': widget.longitude
     });
@@ -70,8 +76,8 @@ class _MapWidgetState extends State<MapWidget> {
       body: GoogleMap(
         onMapCreated: _onMapCreated,
         initialCameraPosition: const CameraPosition(
-          target: LatLng(0, 0),
-          zoom: 2,
+          target: LatLng(9.9816, 76.2999),
+          zoom: 7,
         ),
         markers: _markers.values.toSet(),
       ),

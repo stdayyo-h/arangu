@@ -1,3 +1,4 @@
+import 'package:arangu/screens/Map/map_card.dart';
 import 'package:arangu/screens/ReviewCard.dart';
 import 'package:arangu/screens/crafts/crafts.dart';
 import 'package:flutter/material.dart';
@@ -47,13 +48,12 @@ class CraftDetails extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 10),
                         width: 300,
                         height: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: NetworkImage(
-                                  "https://d32ogoqmya1dw8.cloudfront.net/images/sp/library/google_earth/google_maps_hello_world.jpg")),
-                        ),
+
+                        // child: MapCardWidget(
+                        //   name: "${todo.event_name}",
+                        //   latitude: todo.latitude!.toDouble(),
+                        //   longitude: todo.longitude!.toDouble(),
+                        // ),
                       ),
                     ),
                     SizedBox(
