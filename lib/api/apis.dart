@@ -1,10 +1,11 @@
 import 'dart:convert';
 
 import 'package:arangu/api/all_events/all_events.dart';
+import 'package:arangu/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
-final url = "http://c449-106-216-134-155.ngrok.io/events/all/";
+final url = "${constants.BaseUrl}/events/all/";
 Future<http.Response> getAllEvents() {
   final response = http.get(Uri.parse(url));
 

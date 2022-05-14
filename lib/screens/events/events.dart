@@ -136,9 +136,19 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
                   },
                 ),
               ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(color: Color(0xFFC1D9A3), width: 2),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "Read More",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
             ],
           ),
-        )
+        ),
       ],
     );
   }
@@ -163,7 +173,7 @@ class PlacesCircleStackWidget extends StatelessWidget {
         ),
         Positioned(
           left: 35,
-          bottom: 15,
+          bottom: 5,
           child: Icon(
             Icons.map,
             size: 30,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SuggestedEventCard extends StatelessWidget {
+class CategoryCards extends StatelessWidget {
   final String name;
   final String place;
   final String imageUrl;
-  const SuggestedEventCard(
+  const CategoryCards(
       {Key? key,
       required this.name,
       required this.place,
@@ -15,13 +15,16 @@ class SuggestedEventCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          height: 120,
-          width: 180,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                  fit: BoxFit.cover, image: NetworkImage(imageUrl))),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 120,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    fit: BoxFit.cover, image: NetworkImage(imageUrl))),
+          ),
         ),
         Positioned(
           child: Text(
