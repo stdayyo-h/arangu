@@ -73,7 +73,7 @@ class _MapWidgetState extends State<MapWidget> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Trending Events Locations'),
-        backgroundColor: Colors.green[700],
+        backgroundColor: Color(0xFFC1D9A3),
       ),
       body: GoogleMap(
         onMapCreated: _onMapCreated,

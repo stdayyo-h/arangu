@@ -21,7 +21,7 @@ class SuggestedEventCard extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                  fit: BoxFit.cover, image: NetworkImage("htt"))),
+                  fit: BoxFit.cover, image: NetworkImage(imageUrl))),
         ),
         Positioned(
           child: Text(

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:arangu/constants/colors.dart';
 import 'package:arangu/screens/events/EventDetails.dart';
 import 'package:http/http.dart' as http;
 import 'package:arangu/screens/Explore/SuggestedEvents.dart';
@@ -39,8 +40,7 @@ class SuggestedEvents {
 }
 
 Future<List<SuggestedEvents>> fetchSuggestedEvents() async {
-  final url =
-      'http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io/events/trending?keywords=temple hindu';
+  final url = '${constants.BaseUrl}/events/trending?keywords=temple hindu';
   final response = await http.get(Uri.parse("${url}"));
 
   if (response.statusCode == 200) {
@@ -95,7 +95,7 @@ class _SuggestedEventSectionMLState extends State<SuggestedEventSectionML> {
                     name: "${snapshot.data![index].event_name}",
                     place: "${snapshot.data![index].event_place}",
                     imageUrl:
-                        "http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io${snapshot.data![index].image}",
+                        "${constants.BaseUrl}${snapshot.data![index].image}",
                   );
                 }),
           );

@@ -138,7 +138,7 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
               ),
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
-                  side: BorderSide(color: Colors.green, width: 2),
+                  side: BorderSide(color: Color(0xFFC1D9A3), width: 2),
                 ),
                 onPressed: () {},
                 child: Text(
@@ -173,7 +173,7 @@ class PlacesCircleStackWidget extends StatelessWidget {
         ),
         Positioned(
           left: 35,
-          bottom: -10,
+          bottom: 5,
           child: Icon(
             Icons.map,
             size: 30,
