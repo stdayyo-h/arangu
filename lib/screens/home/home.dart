@@ -19,6 +19,7 @@ class Home extends StatelessWidget {
 
       ExploreScreen(),
       MapWidget(),
+      // GamesPage(),
       GamesPage(),
       // CraftsPage(),
 
