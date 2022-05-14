@@ -4,6 +4,7 @@ import 'package:arangu/screens/events/widgets/Title.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:swipeable_card_stack/swipeable_card_stack.dart';
+import 'package:arangu/constants/colors.dart';
 
 // class TrendingEventsPage extends StatefulWidget {
 //   const TrendingEventsPage({Key? key}) : super(key: key);
@@ -76,7 +77,15 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
 
     return Column(
       children: [
-        Heading(title: "Trending Events"),
+        SizedBox(
+          height: 10,
+        ),
+        Text(
+          'Trending Events',
+          style: kHeader1TextStyle,
+        ),
+        // Heading(title: "Trending Events"
+        // ),
         SizedBox(
           height: 10,
         ),

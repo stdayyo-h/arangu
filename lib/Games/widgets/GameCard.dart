@@ -1,3 +1,4 @@
+import 'package:arangu/Games/games_play.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -19,7 +20,12 @@ class GameCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const GamesPlay()),
+        );
+      },
       child: Container(
         width: double.infinity,
         height: 210,

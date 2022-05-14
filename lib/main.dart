@@ -1,4 +1,5 @@
 import 'package:arangu/screens/home/home.dart';
+import 'package:arangu/screens/auth/Login.dart';
 import 'package:arangu/screens/home/widgets/BottomNav.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Home(),
+      home: LoginScreen(),
     );
   }
 }

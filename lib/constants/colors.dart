@@ -6,6 +6,13 @@ class constants {
       "http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io";
 }
 
+const kHeader1TextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontFamily: 'Poppins',
+  fontSize: 34,
+  color: Color(0XFF494949),
+);
+
 const kHeaderTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontFamily: 'Poppins',
