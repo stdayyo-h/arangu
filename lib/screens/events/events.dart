@@ -76,6 +76,10 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
 
     return Column(
       children: [
+        Heading(title: "Trending Events"),
+        SizedBox(
+          height: 10,
+        ),
         SwipeableCardsSection(
             cardController: _cardController,
             context: context,
@@ -109,7 +113,33 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
                   imageUrl:
                       "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg")
             ]),
+        Container(
+          height: 250,
+          color: Colors.black,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              PlacesCircleStackWidget(),
+              CircleAvatar(
+                radius: 50,
+              )
+            ],
+          ),
+        )
       ],
+    );
+  }
+}
+
+class PlacesCircleStackWidget extends StatelessWidget {
+  const PlacesCircleStackWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [],
     );
   }
 }

@@ -29,10 +29,13 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
+  date_time_picker: ^2.1.0
   dio: ^4.0.6
   flutter:
     sdk: flutter
+  fluttericon: ^2.0.0
   http: ^0.13.4
+  image_picker: ^0.7.2+1
   json_annotation: ^4.5.0
   swipeable_card_stack: ^0.0.5
 
@@ -53,6 +56,10 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.
 flutter:
+  
+  assets:
+    - assets/images/Emoji.png
+    - assets/images/google_logo.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

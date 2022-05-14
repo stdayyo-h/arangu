@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
+import 'package:fluttericon/typicons_icons.dart';
 import 'package:flutter/material.dart';
 
 ValueNotifier<int> indexChangeNotifier = ValueNotifier(0);
@@ -18,13 +18,19 @@ class BottomNav extends StatelessWidget {
             onTap: (index) {
               indexChangeNotifier.value = index;
             },
-            color: Colors.green,
+            color: Color(0xFFC1D9A3),
             backgroundColor: Colors.white,
             items: <Widget>[
               Icon(Icons.home, size: 30),
-              Icon(Icons.map, size: 30),
-              Icon(Icons.add, size: 30),
-              Icon(Icons.call_split, size: 30),
+              Icon(
+                Typicons.compass,
+                size: 30,
+              ),
+              Icon(
+                Typicons.location,
+                size: 30,
+              ),
+              Icon(Typicons.dribbble),
               ClipOval(
                 child: Image.network(
                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_d3SP2vKOeGFVESn5rk6xnPiQ0naW2e-ldA&usqp=CAU',

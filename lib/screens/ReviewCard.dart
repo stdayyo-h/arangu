@@ -6,6 +6,7 @@ class ReviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 4),
       width: 300,
       height: 60,
       decoration: BoxDecoration(
@@ -40,6 +41,18 @@ class ReviewCard extends StatelessWidget {
                     color: Colors.green[200],
                     borderRadius: BorderRadius.circular(5)),
               ),
+              Spacer(),
+              Text("2d ago"),
+            ],
+          ),
+          Row(
+            children: [
+              Flexible(
+                  child: Text(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to ",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ))
             ],
           ),
         ],

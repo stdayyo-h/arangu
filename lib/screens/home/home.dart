@@ -1,3 +1,5 @@
+import 'package:arangu/Games/Games.dart';
+import 'package:arangu/screens/Explore/Explore.dart';
 import 'package:arangu/screens/add_event/add_event.dart';
 import 'package:arangu/screens/auth/Profile.dart';
 import 'package:arangu/screens/crafts/crafts.dart';
@@ -13,9 +15,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final _pages = [
       TrendingEventsPage(),
-      AddEvent(),
+      ExploreScreen(),
       SplashScreen(),
-      CraftsPage(),
+      // CraftsPage(),
+      GamesPage(),
       ProfilePage()
     ];
     return Scaffold(

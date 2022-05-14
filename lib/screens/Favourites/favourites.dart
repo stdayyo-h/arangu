@@ -19,6 +19,7 @@ class FavouritesPage extends StatelessWidget {
             ),
           ),
         ),
+        Image.asset('assets/images/Emoji.png')
       ]),
     );
   }

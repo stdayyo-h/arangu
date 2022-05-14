@@ -150,11 +150,7 @@ class profilePageState extends State<ProfilePage>
             ),
             Expanded(
               child: TabBarView(
-                children: [
-                  TrendingEventsPage(),
-                  TrendingEventsPage(),
-                  FavouritesPage()
-                ],
+                children: [AddEvent(), TrendingEventsPage(), FavouritesPage()],
                 controller: _tabController,
               ),
             ),
