@@ -64,7 +64,7 @@ class GamesPlay extends StatelessWidget {
                     children: [
                       Container(
                         width: 110,
-                        height: 560,
+                        height: 440,
                         color: Colors.black,
                         child: Column(
                           children: [
@@ -81,14 +81,14 @@ class GamesPlay extends StatelessWidget {
                             SizedBox(
                               height: 10,
                             ),
-                            Container(
-                              width: 100,
-                              height: 100,
-                              color: Colors.white,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            // Container(
+                            //   width: 100,
+                            //   height: 100,
+                            //   color: Colors.white,
+                            // ),
+                            // SizedBox(
+                            //   height: 10,
+                            // ),
                             Container(
                               width: 100,
                               height: 100,
@@ -118,7 +118,7 @@ class GamesPlay extends StatelessWidget {
                       ),
                       Container(
                         width: 110,
-                        height: 560,
+                        height: 440,
                         color: Colors.black,
                         child: Column(
                           children: [
@@ -135,14 +135,14 @@ class GamesPlay extends StatelessWidget {
                             SizedBox(
                               height: 10,
                             ),
-                            Container(
-                              width: 100,
-                              height: 100,
-                              color: Colors.white,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            // Container(
+                            //   width: 100,
+                            //   height: 100,
+                            //   color: Colors.white,
+                            // ),
+                            // SizedBox(
+                            //   height: 10,
+                            // ),
                             Container(
                               width: 100,
                               height: 100,

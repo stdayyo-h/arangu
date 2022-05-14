@@ -17,16 +17,20 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Image(
+        image: AssetImage('assets/images/bottomimg.png'),
+        width: double.infinity,
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 100.0, top: 100),
+            padding: const EdgeInsets.only(left: 20, top: 60),
             child: Center(
               child: Image(
-                image: AssetImage('assets/images/Group23.png'),
-                width: double.infinity,
+                image: AssetImage('assets/images/AranguLogo2000.png'),
+                width: 300,
               ),
             ),
           ),
@@ -50,6 +54,16 @@ class LoginScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
                 textAlign: TextAlign.center),
           ),
+          // Padding(
+          //   padding: EdgeInsets.only(top: 100),
+          //   child: Positioned(
+          //     bottom: 0.0,
+          //     child: Image(
+          //       image: AssetImage('assets/images/bottomimg.png'),
+          //       width: double.infinity,
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
