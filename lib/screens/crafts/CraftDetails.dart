@@ -34,11 +34,11 @@ class CraftDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "${todo.event_name}",
+                      "${todo.craft_name}",
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
-                    Text("${todo.event_description}",
+                    Text("${todo.craft_description}",
                         style: TextStyle(
                             fontSize: 10, fontWeight: FontWeight.w200)),
                     SizedBox(
@@ -52,7 +52,7 @@ class CraftDetails extends StatelessWidget {
                         // child: Image.network(
                         //     "http://www.arablog.co/wp-content/uploads/2017/01/gmapsjs-marker-map-1338661211_full550.png")
                         child: MapCardWidget(
-                          name: "${todo.event_name}",
+                          name: "${todo.craft_name}",
                           latitude: todo.latitude!.toDouble(),
                           longitude: todo.longitude!.toDouble(),
                         ),

@@ -80,25 +80,14 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
 
     return Column(
       children: [
-        Row(
-          children: [
-            Heading(title: "Trending Events"),
-            Spacer(),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const DonationsPage()),
-                );
-              },
-              child: Image.asset(
-                "assets/images/donation.png",
-                width: 70,
-                height: 70,
-              ),
-            )
-          ],
+        Text(
+          'Trending Events',
+          style: kHeaderTextStyle,
+        ),
+        // Heading(title: "Trending Events"
+        // ),
+        SizedBox(
+          height: 10,
         ),
         LatestTrendingEventPage(),
         Spacer(),

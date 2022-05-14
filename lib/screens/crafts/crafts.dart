@@ -14,18 +14,18 @@ List<Post> postFromJson(String str) =>
 class Post {
   Post(
       {required this.id,
-      required this.event_name,
-      required this.event_place,
-      required this.event_description,
+      required this.craft_name,
+      required this.craft_place,
+      required this.craft_description,
       required this.latitude,
       required this.longitude,
       required this.rating,
       required this.image});
 
   final int id;
-  final String? event_name;
-  final String? event_description;
-  final String? event_place;
+  final String? craft_name;
+  final String? craft_description;
+  final String? craft_place;
   final double? latitude;
   final double? longitude;
   final double? rating;
@@ -33,9 +33,9 @@ class Post {
 
   factory Post.fromMap(Map<String, dynamic> json) => Post(
       id: json['id'],
-      event_name: json['event_name'],
-      event_description: json['event_description'],
-      event_place: json['event_place'],
+      craft_name: json['craft_name'],
+      craft_description: json['craft_description'],
+      craft_place: json['craft_place'],
       latitude: json['latitude'],
       longitude: json['latitude'],
       rating: json['rating'],
@@ -43,7 +43,7 @@ class Post {
 }
 
 Future<List<Post>> fetchPost() async {
-  final url = "${constants.BaseUrl}/events/all/";
+  final url = "${constants.BaseUrl}/crafts/all/";
   final response = await http.get(Uri.parse("${url}"));
 
   if (response.statusCode == 200) {
@@ -91,8 +91,8 @@ class _CraftsPageState extends State<CraftsPage> {
               },
               child: Container(
                   child: EventCard(
-                name: "${snapshot.data![index].event_name}",
-                place: "${snapshot.data![index].event_place}",
+                name: "${snapshot.data![index].craft_name}",
+                place: "${snapshot.data![index].craft_place}",
                 imageUrl: "${snapshot.data![index].image}",
               )),
             ),

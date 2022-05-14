@@ -15,7 +15,12 @@ class OnBoarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List interestsDummyData = ["", "", ""];
+    final List interestsDummyData = [
+      "Performed Arts",
+      "Fine Arts",
+      "Malappulayattam",
+      "Mannankoothu"
+    ];
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(

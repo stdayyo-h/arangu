@@ -16,31 +16,34 @@ class ExploreScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 5),
         child: ListView(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Recommended for you",
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SuggestedEventSectionML(),
-                Text(
-                  "Discover some crafts here",
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 500,
-                  child: CraftsPage(),
-                )
-              ],
+            Padding(
+              padding: EdgeInsets.only(left: 7),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Recommended for you",
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SuggestedEventSectionML(),
+                  Text(
+                    "Discover some crafts here",
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 500,
+                    child: CraftsPage(),
+                  )
+                ],
+              ),
             ),
-            Gallery()
+            Gallery(),
           ],
         ),
       ),
