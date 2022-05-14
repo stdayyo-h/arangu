@@ -1,8 +1,10 @@
+import 'package:arangu/donations.dart';
 import 'package:arangu/screens/events/SwipeEventCard.dart';
 import 'package:arangu/screens/events/widgets/EventCard.dart';
 import 'package:arangu/screens/events/widgets/Title.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
+import 'package:fluttericon/typicons_icons.dart';
 import 'package:swipeable_card_stack/swipeable_card_stack.dart';
 
 // class TrendingEventsPage extends StatefulWidget {
@@ -76,7 +78,26 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
 
     return Column(
       children: [
-        Heading(title: "Trending Events"),
+        Row(
+          children: [
+            Heading(title: "Trending Events"),
+            Spacer(),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DonationsPage()),
+                );
+              },
+              child: Image.asset(
+                "assets/images/donation.png",
+                width: 70,
+                height: 70,
+              ),
+            )
+          ],
+        ),
         SizedBox(
           height: 10,
         ),
@@ -173,11 +194,11 @@ class PlacesCircleStackWidget extends StatelessWidget {
         ),
         Positioned(
           left: 35,
-          bottom: 5,
+          bottom: -10,
           child: Icon(
-            Icons.map,
-            size: 30,
-            color: Colors.white,
+            Typicons.map,
+            size: 25,
+            color: Color(0xFFC1D9A3),
           ),
         )
       ],

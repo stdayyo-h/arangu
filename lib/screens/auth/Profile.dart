@@ -1,4 +1,5 @@
 import 'package:arangu/screens/Favourites/favourites.dart';
+import 'package:arangu/screens/Gallery2.dart';
 import 'package:arangu/screens/add_event/add_event.dart';
 import 'package:arangu/screens/events/events.dart';
 import 'package:flutter/material.dart';
@@ -150,7 +151,7 @@ class profilePageState extends State<ProfilePage>
             ),
             Expanded(
               child: TabBarView(
-                children: [AddEvent(), TrendingEventsPage(), FavouritesPage()],
+                children: [AddEvent(), Gallery2(), FavouritesPage()],
                 controller: _tabController,
               ),
             ),

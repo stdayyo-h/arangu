@@ -33,24 +33,24 @@ class SwipeEventCard extends StatelessWidget {
             height: 430,
           ),
           Positioned(
-            bottom: 160,
+            bottom: 20,
             left: 25,
             child: Text(
               name,
               style: TextStyle(
                   fontSize: 30,
-                  color: Colors.white,
+                  color: Colors.blue[900],
                   fontWeight: FontWeight.bold),
             ),
           ),
           Positioned(
-            bottom: 140,
+            bottom: 10,
             left: 25,
             child: Text(
               place,
               style: TextStyle(
                   fontSize: 12,
-                  color: Colors.green,
+                  color: Colors.green[900],
                   fontWeight: FontWeight.bold),
             ),
           ),

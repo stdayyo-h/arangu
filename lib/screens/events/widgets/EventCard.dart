@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:bordered_text/bordered_text.dart';
 
 class EventCard extends StatelessWidget {
   final String name;
@@ -30,17 +31,30 @@ class EventCard extends StatelessWidget {
             Positioned(
               bottom: 10,
               left: 12,
-              child: Text(
-                name,
-                style: TextStyle(fontSize: 30, color: Colors.white),
+              child: BorderedText(
+                strokeWidth: 2.0,
+                strokeColor: Color(0xFFC1D9A3),
+                child: Text(
+                  name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
             Positioned(
               bottom: 2,
-              left: 12,
-              child: Text(
-                place,
-                style: TextStyle(fontSize: 12, color: Colors.greenAccent),
+              left: 14,
+              child: BorderedText(
+                child: Text(
+                  place,
+                  style: TextStyle(
+                    color: Color(0xFFC1D9A3),
+                    fontSize: 8.0,
+                  ),
+                ),
               ),
             ),
           ],

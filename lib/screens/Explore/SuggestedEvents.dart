@@ -27,7 +27,7 @@ class SuggestedEventCard extends StatelessWidget {
           child: Text(
             name,
             style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
           ),
           left: 10,
           bottom: 45,
@@ -36,7 +36,9 @@ class SuggestedEventCard extends StatelessWidget {
           child: Text(
             place,
             style: TextStyle(
-                fontSize: 15, fontWeight: FontWeight.w600, color: Colors.green),
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+                color: Color(0xFFC1D9A3)),
           ),
           left: 10,
           bottom: 30,
