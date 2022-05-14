@@ -114,15 +114,28 @@ class _TrendingEventsPageState extends State<TrendingEventsPage> {
                       "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shree_Krishnan_by_FACT_Jayadeva_Varma.jpg")
             ]),
         Container(
-          height: 250,
-          color: Colors.black,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
+          height: 200,
+          color: Colors.grey[700],
+          child: Column(
             children: [
-              PlacesCircleStackWidget(),
-              CircleAvatar(
-                radius: 50,
-              )
+              Text(
+                "Finding Places to visit",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              Expanded(
+                child: ListView.separated(
+                  itemCount: 6,
+                  separatorBuilder: (BuildContext context, int index) =>
+                      const SizedBox(
+                    width: 10,
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                    return PlacesCircleStackWidget();
+                  },
+                ),
+              ),
             ],
           ),
         )
@@ -139,7 +152,25 @@ class PlacesCircleStackWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: [],
+      children: [
+        ClipOval(
+          child: Image.network(
+            'https://sargaalaya.in/wp-content/uploads/2018/11/22-2.jpg',
+            width: 100,
+            height: 110,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Positioned(
+          left: 35,
+          bottom: 15,
+          child: Icon(
+            Icons.map,
+            size: 30,
+            color: Colors.white,
+          ),
+        )
+      ],
     );
   }
 }
