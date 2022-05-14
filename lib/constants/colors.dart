@@ -21,7 +21,7 @@ const kHeaderTextStyle = TextStyle(
 );
 
 const kActionHeaderTextStyle = TextStyle(
-  fontWeight: FontWeight.w700,
+  fontWeight: FontWeight.w400,
   fontFamily: 'Poppins',
   fontSize: 18,
   color: Color.fromRGBO(46, 45, 45, 1),

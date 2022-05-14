@@ -11,139 +11,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-// class AddEvent extends StatelessWidget {
-//   const AddEvent({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return SafeArea(
-//       child: Scaffold(
-//         body: Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 20),
-//           child: SingleChildScrollView(
-//             child: Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               children: [
-//                 SizedBox(
-//                   height: 30,
-//                 ),
-//                 SizedBox(
-//                   height: 15,
-//                 ),
-//                 Text(
-//                   'Event Name',
-//                   style: kParaTextStyle,
-//                 ),
-//                 InputBox(
-//                   onchangedFn: () {},
-//                   //  (_) => context
-//                   // .read<ReguserBloc>().add(
-//                   //       FullNameChanged(fullName: _),
-//                   //     ),
-//                 ),
-//                 SizedBox(
-//                   height: 15,
-//                 ),
-//                 Text(
-//                   'Age',
-//                   style: kParaTextStyle,
-//                 ),
-//                 InputBox(
-//                   onchangedFn: () {},
-//                   //  (_) =>
-//                   //     context.read<ReguserBloc>().add(AgeChanged(age: _)),
-//                 ),
-//                 SizedBox(
-//                   height: 15,
-//                 ),
-//                 Text(
-//                   'Venue',
-//                   style: kParaTextStyle,
-//                 ),
-//                 InputBox(
-//                   onchangedFn: () {},
-//                   //  (_) => context
-//                   //     .read<ReguserBloc>()
-//                   //     .add(FullNameChanged(fullName: _)
-//                   //     ),
-//                 ),
-//                 SizedBox(
-//                   height: 15,
-//                 ),
-//                 Text(
-//                   'Date',
-//                   style: kParaTextStyle,
-//                 ),
-//                 DateTimePicker(
-//                   initialValue: '',
-
-//                   firstDate: DateTime(2000),
-//                   lastDate: DateTime(2100),
-//                   // dateLabelText: 'Date',
-//                   onChanged: (val) => print(val),
-//                   validator: (val) {
-//                     print(val);
-//                     return null;
-//                   },
-//                   onSaved: (val) => print(val),
-//                 ),
-//                 SizedBox(
-//                   height: 20,
-//                 ),
-//                 Text(
-//                   'Event Type',
-//                   style: kParaTextStyle,
-//                 ),
-//                 InputBox(
-//                   onchangedFn: () {},
-//                 ),
-//                 SizedBox(
-//                   height: 20,
-//                 ),
-//                 Text(
-//                   'Add Image',
-//                   style: kParaTextStyle,
-//                 ),
-//                 Row(
-//                   children: [
-//                     Text('Pick Gallery '),
-//                     IconButton(
-//                       onPressed: (() {}),
-//                       icon: Icon(
-//                         Icons.image_outlined,
-//                         color: Colors.black,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//                 // MyImagePicker(),
-//                 SizedBox(
-//                   height: 20,
-//                 ),
-//                 Text(
-//                   'Add a little Description',
-//                   style: kParaTextStyle,
-//                 ),
-//                 InputBox(
-//                   onchangedFn: () {},
-//                 ),
-//                 SizedBox(
-//                   height: 20,
-//                 ),
-//                 Center(
-//                   child: GradientButon(
-//                     text: "Save",
-//                     onPressed: () {},
-//                   ),
-//                 )
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 class AddEvent extends StatefulWidget {
   const AddEvent({Key? key}) : super(key: key);
 
@@ -178,15 +45,14 @@ class _AddEventState extends State<AddEvent> {
     var url =
         'http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io/events/all/';
     var data = {
-      "event_name": "asheraattam",
-      "event_description":
-          "pha pule aattam is a temple art in Kerala, India. It is a dance drama and presents the story of Krishna in a series of eight plays and was created by Manaveda (1585–1658 AD), the then Zamorin Raja of Calicut in northern Kerala.[1] The eight plays are: Avataram, Kaliyamardanam, Rasakrida, Kamsavadham, Swayamvaram, Banayuddham, Vividavadham and Swargarohanam.[2] It survives in its glory at the Guruvayur Sri Krishna temple (Thrissur district, Kerala, India).",
+      "event_name": event_name,
+      "event_description": event_description,
       "event_time": "06:05:56",
-      "event_place": "kotarasur",
+      "event_place": event_place,
       "latitude": 10.56,
       "longitude": 76.2144,
       "rating": 4.9,
-      "reviews": "asheratam is nice, It is very nice"
+      "reviews": "It is very nice"
     };
     // 'event_name': event_name,
     // 'event_place': event_name,
@@ -240,16 +106,17 @@ class _AddEventState extends State<AddEvent> {
         children: <Widget>[
           Padding(
               padding: const EdgeInsets.all(12.0),
-              child: Text('Fill All Information in Form',
-                  style: TextStyle(fontSize: 22))),
+              child: Text('Fill All Information about the Event',
+                  style: kActionHeaderTextStyle)),
           Container(
-              width: 280,
-              padding: EdgeInsets.all(10.0),
-              child: TextField(
-                controller: eventNameController,
-                autocorrect: true,
-                decoration: InputDecoration(hintText: 'Enter Event Name '),
-              )),
+            width: 280,
+            padding: EdgeInsets.all(10.0),
+            child: TextField(
+              controller: eventNameController,
+              autocorrect: true,
+              decoration: InputDecoration(hintText: 'Enter Event Name '),
+            ),
+          ),
           Container(
               width: 280,
               padding: EdgeInsets.all(10.0),
@@ -281,16 +148,3 @@ class _AddEventState extends State<AddEvent> {
     )));
   }
 }
-
-
-// Future<http.Response> (String title) {
-//   return http.post(
-//     Uri.parse('https://jsonplaceholder.typicode.com/albums'),
-//     headers: <String, String>{
-//       'Content-Type': 'application/json; charset=UTF-8',
-//     },
-//     body: jsonEncode(<String, String>{
-//       'title': title,
-//     }),
-//   );
-// }

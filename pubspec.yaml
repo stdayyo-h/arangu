@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bordered_text: ^2.0.0
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
   date_time_picker: ^2.1.0
