@@ -124,7 +124,7 @@ class profilePageState extends State<ProfilePage>
                   ),
                   Center(
                     child: Text(
-                      "Hi,Asher MS",
+                      "Hi,Adam",
                       style:
                           TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                     ),
