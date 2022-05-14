@@ -97,8 +97,7 @@ class _SuggestedEventSectionMLState extends State<LatestTrendingEventPage> {
                   return LatestEventCard(
                     name: "${snapshot.data![index].event_name}",
                     place: "${snapshot.data![index].event_place}",
-                    imageUrl:
-                        "${constants.BaseUrl}${snapshot.data![index].image}",
+                    imageUrl: "${snapshot.data![index].image}",
                   );
                 }),
           );
