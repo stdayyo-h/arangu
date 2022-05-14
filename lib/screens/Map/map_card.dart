@@ -25,11 +25,14 @@ class _MapCardWidgetState extends State<MapCardWidget> {
 
   Future<void> _onMapCreated(GoogleMapController controller) async {
     offices.add({
-      'name': widget.name,
-      'latitude': widget.latitude,
-      'longitude': widget.longitude
+      'name': 'Krishnanattam',
+      'latitude': 9.516,
+      'longitude': 76.522,
     });
-
+    print("Print Here");
+    print(widget.name);
+    print(widget.latitude);
+    print(widget.longitude);
     setState(() {
       _markers.clear();
 
