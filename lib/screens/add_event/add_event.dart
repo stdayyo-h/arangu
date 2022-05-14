@@ -167,9 +167,13 @@ class _AddEventState extends State<AddEvent> {
     });
 
     // Getting value from Controller
+    print("Printing Here");
     String event_name = eventNameController.text.toString();
+    print(event_name);
     String event_place = venueController.text.toString();
+    print(event_place);
     String event_description = descriptionController.text.toString();
+    print(event_description);
 
     var url =
         'http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io/events/all/';
@@ -190,7 +194,7 @@ class _AddEventState extends State<AddEvent> {
     var response = await http.post(
       Uri.parse(url),
       headers: <String, String>{
-        'Content-Type': 'application./json; charset=UTF-8',
+        'Content-Type': 'application/json; charset=UTF-8',
       },
       body: json.encode(data),
     );
@@ -199,8 +203,13 @@ class _AddEventState extends State<AddEvent> {
     // If Web call Success than Hide the CircularProgressIndicator.
     if (response.statusCode == 200) {
       setState(() {
+        print("Print Here");
+        print(message);
         visible = false;
       });
+    } else {
+      print("Print Here");
+      print(message);
     }
 
     // Showing Alert Dialog with Response JSON.
