@@ -1,6 +1,7 @@
 import 'package:arangu/screens/Map/map_card.dart';
 import 'package:arangu/screens/ReviewCard.dart';
 import 'package:arangu/screens/crafts/crafts.dart';
+import 'package:arangu/screens/events/TrendingCrafts.dart';
 import 'package:flutter/material.dart';
 
 class CraftDetails extends StatelessWidget {
@@ -48,7 +49,8 @@ class CraftDetails extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 10),
                         width: 300,
                         height: 150,
-
+                        child: Image.network(
+                            "http://www.arablog.co/wp-content/uploads/2017/01/gmapsjs-marker-map-1338661211_full550.png"),
                         // child: MapCardWidget(
                         //   name: "${todo.event_name}",
                         //   latitude: todo.latitude!.toDouble(),

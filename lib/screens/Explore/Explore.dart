@@ -1,4 +1,5 @@
 import 'package:arangu/screens/Explore/SuggestedEvents.dart';
+import 'package:arangu/screens/crafts/crafts.dart';
 import 'package:arangu/screens/events/TrendingCrafts.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,7 @@ class ExploreScreen extends StatelessWidget {
                 ),
                 Container(
                   height: 500,
-                  child: TrendingCrafts(),
+                  child: CraftsPage(),
                 )
               ],
             ),

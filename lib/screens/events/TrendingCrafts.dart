@@ -6,11 +6,11 @@ import 'package:http/http.dart' as http;
 
 import '../crafts/CraftDetails.dart';
 
-List<Post> postFromJson(String str) =>
-    List<Post>.from(json.decode(str).map((x) => Post.fromMap(x)));
+List<Crafts> craftFromJson(String str) =>
+    List<Crafts>.from(json.decode(str).map((x) => Crafts.fromMap(x)));
 
-class Post {
-  Post(
+class Crafts {
+  Crafts(
       {required this.id,
       required this.event_name,
       required this.event_place,
@@ -29,7 +29,7 @@ class Post {
   final double? rating;
   final String? image;
 
-  factory Post.fromMap(Map<String, dynamic> json) => Post(
+  factory Crafts.fromMap(Map<String, dynamic> json) => Crafts(
       id: json['id'],
       event_name: json['event_name'],
       event_description: json['event_description'],
@@ -40,7 +40,7 @@ class Post {
       image: json['image']);
 }
 
-Future<List<Post>> fetchPost() async {
+Future<List<Crafts>> fetchPost() async {
   final url =
       'http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io/events/all/';
   final response = await http.get(Uri.parse("${url}"));
@@ -48,7 +48,7 @@ Future<List<Post>> fetchPost() async {
   if (response.statusCode == 200) {
     final parsed = json.decode(response.body).cast<Map<String, dynamic>>();
 
-    return parsed.map<Post>((json) => Post.fromMap(json)).toList();
+    return parsed.map<Crafts>((json) => Crafts.fromMap(json)).toList();
   } else {
     throw Exception('Failed to load album');
   }
@@ -62,7 +62,7 @@ class TrendingCrafts extends StatefulWidget {
 }
 
 class _CraftsPageState extends State<TrendingCrafts> {
-  late Future<List<Post>> futurePost;
+  late Future<List<Crafts>> futurePost;
   @override
   void initState() {
     futurePost = fetchPost();
@@ -71,7 +71,7 @@ class _CraftsPageState extends State<TrendingCrafts> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<Post>>(
+    return FutureBuilder<List<Crafts>>(
       future: futurePost,
       builder: (context, snapshot) {
         // print("${snapshot.data![1].image}");
