@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class constants {
-  static String BaseUrl =
-      "http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io";
+  static String BaseUrl = "https://arangu-backend.herokuapp.com";
 }
 
 const kHeader1TextStyle = TextStyle(

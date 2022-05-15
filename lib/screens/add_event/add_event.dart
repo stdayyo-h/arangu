@@ -42,8 +42,7 @@ class _AddEventState extends State<AddEvent> {
     String event_description = descriptionController.text.toString();
     print(event_description);
 
-    var url =
-        'http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io/events/all/';
+    var url = "${constants.BaseUrl}/events/all/";
     var data = {
       "event_name": event_name,
       "event_description": event_description,
@@ -77,13 +76,17 @@ class _AddEventState extends State<AddEvent> {
       print("Print Here");
       print(message);
     }
-
+    setState(() {
+      print("Print Here");
+      print(message);
+      visible = false;
+    });
     // Showing Alert Dialog with Response JSON.
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("message"),
+          title: Text("success!"),
           actions: <Widget>[
             ElevatedButton(
               child: new Text("OK"),
@@ -104,10 +107,6 @@ class _AddEventState extends State<AddEvent> {
             child: Center(
       child: Column(
         children: <Widget>[
-          Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Text('Fill All Information about the Event',
-                  style: kActionHeaderTextStyle)),
           Container(
             width: 280,
             padding: EdgeInsets.all(10.0),

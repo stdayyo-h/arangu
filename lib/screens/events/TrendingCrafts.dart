@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:arangu/constants/colors.dart';
 import 'package:arangu/screens/events/widgets/EventCard.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -41,8 +42,7 @@ class Crafts {
 }
 
 Future<List<Crafts>> fetchPost() async {
-  final url =
-      'http://fde8-2401-4900-4c6d-373f-1cf7-221e-e919-cb91.ngrok.io/events/all/';
+  final url = '${constants.BaseUrl}/events/all/';
   final response = await http.get(Uri.parse("${url}"));
 
   if (response.statusCode == 200) {

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:arangu/constants/colors.dart';
 import 'package:arangu/screens/events/EventDetails.dart';
+import 'package:arangu/screens/events/widgets/MlEvent.dart';
 import 'package:http/http.dart' as http;
 import 'package:arangu/screens/Explore/SuggestedEvents.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class SuggestedEvents {
 }
 
 Future<List<SuggestedEvents>> fetchSuggestedEvents() async {
-  final url = '${constants.BaseUrl}/events/trending?keywords=temple hindu';
+  final url = '${constants.BaseUrl}/events/trending?keywords=temple';
   final response = await http.get(Uri.parse("${url}"));
 
   if (response.statusCode == 200) {
@@ -91,11 +92,21 @@ class _SuggestedEventSectionMLState extends State<SuggestedEventSectionML> {
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 3),
                 itemBuilder: (context, index) {
-                  return SuggestedEventCard(
-                    name: "${snapshot.data![index].event_name}",
-                    place: "${snapshot.data![index].event_place}",
-                    imageUrl:
-                        "${constants.BaseUrl}${snapshot.data![index].image}",
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MLEventdetails(),
+                              settings: RouteSettings(
+                                  arguments: snapshot.data![index])));
+                    },
+                    child: SuggestedEventCard(
+                      name: "${snapshot.data![index].event_name}",
+                      place: "${snapshot.data![index].event_place}",
+                      imageUrl:
+                          "${constants.BaseUrl}${snapshot.data![index].image}",
+                    ),
                   );
                 }),
           );
