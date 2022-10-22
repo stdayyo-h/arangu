@@ -22,18 +22,16 @@ class _AddEventState extends State<AddEvent> {
   final TextEditingController eventNameController = TextEditingController();
   final TextEditingController venueController = TextEditingController();
   final TextEditingController descriptionController = TextEditingController();
-  // final imageController = TextEditingController();
-
-  // Boolean variable for CircularProgressIndicator.
+  
   bool visible = false;
 
   Future webCall() async {
-    // Showing CircularProgressIndicator using State.
+    
     setState(() {
       visible = true;
     });
 
-    // Getting value from Controller
+    
     print("Printing Here");
     String event_name = eventNameController.text.toString();
     print(event_name);
@@ -53,9 +51,6 @@ class _AddEventState extends State<AddEvent> {
       "rating": 4.9,
       "reviews": "It is very nice"
     };
-    // 'event_name': event_name,
-    // 'event_place': event_name,
-    // 'event_description': event_description,
     var response = await http.post(
       Uri.parse(url),
       headers: <String, String>{
@@ -65,7 +60,6 @@ class _AddEventState extends State<AddEvent> {
     );
     var message = jsonDecode(response.body);
 
-    // If Web call Success than Hide the CircularProgressIndicator.
     if (response.statusCode == 200) {
       setState(() {
         print("Print Here");
@@ -81,7 +75,7 @@ class _AddEventState extends State<AddEvent> {
       print(message);
       visible = false;
     });
-    // Showing Alert Dialog with Response JSON.
+    
     showDialog(
       context: context,
       builder: (BuildContext context) {

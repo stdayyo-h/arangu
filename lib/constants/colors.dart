@@ -8,14 +8,14 @@ class constants {
 const kHeader1TextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontFamily: 'Poppins',
-  fontSize: 34,
+  fontSize: 33,
   color: Color(0XFF494949),
 );
 
 const kHeaderTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontFamily: 'Poppins',
-  fontSize: 27,
+  fontSize: 26,
   color: Color(0XFF494949),
 );
 

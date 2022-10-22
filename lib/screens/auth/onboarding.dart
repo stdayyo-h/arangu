@@ -2,9 +2,6 @@ import 'dart:ui';
 
 import 'package:arangu/screens/home/home.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
-// import '../bloc/reguser_bloc.dart';
-// import '../../../../Utils/constants/dummy_data.dart';
 import '../../constants/colors.dart';
 import 'widgets/profile_icon_button.dart';
 import 'widgets/gradient_button.dart';
