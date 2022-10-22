@@ -22,8 +22,8 @@ class CraftDetails extends StatelessWidget {
                 height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20)),
+                      bottomLeft: Radius.circular(22),
+                      bottomRight: Radius.circular(22)),
                   image: DecorationImage(
                       fit: BoxFit.fill, image: NetworkImage("${todo.image}")),
                 ),
@@ -49,8 +49,6 @@ class CraftDetails extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 10),
                         width: 400,
                         height: 500,
-                        // child: Image.network(
-                        //     "http://www.arablog.co/wp-content/uploads/2017/01/gmapsjs-marker-map-1338661211_full550.png")
                         child: MapCardWidget(
                           name: "${todo.craft_name}",
                           latitude: todo.latitude!.toDouble(),

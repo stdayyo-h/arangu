@@ -8,9 +8,6 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
-
-// import 'presentation/cubit/auth_cubit.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -54,16 +51,6 @@ class LoginScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
                 textAlign: TextAlign.center),
           ),
-          // Padding(
-          //   padding: EdgeInsets.only(top: 100),
-          //   child: Positioned(
-          //     bottom: 0.0,
-          //     child: Image(
-          //       image: AssetImage('assets/images/bottomimg.png'),
-          //       width: double.infinity,
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
