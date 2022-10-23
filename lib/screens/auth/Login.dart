@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
             },
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           TextButton(
             onPressed: () {},

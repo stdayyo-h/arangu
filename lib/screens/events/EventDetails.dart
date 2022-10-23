@@ -15,7 +15,7 @@ class EventDetails extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as LatestTrendingEvents;
     return Scaffold(
       body: SingleChildScrollView(
-        // padding: EdgeInsets.all(5.0),
+        
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -19,9 +19,6 @@ class SwipeEventCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      // decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-      // width: Width,
-      // height: Height,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
 
       child: Stack(
