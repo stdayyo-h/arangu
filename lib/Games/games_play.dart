@@ -27,7 +27,7 @@ class GamesPlay extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: 'Poppins',
-            fontSize: 24,
+            fontSize: 25,
             color: Color(0XFF000000),
           ),
         ),

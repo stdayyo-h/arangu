@@ -8,7 +8,7 @@ class DonationsPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          "All Kinds of Donations Are accepted",
+          "Donations Are accepted",
           style: TextStyle(fontSize: 120),
         ),
       ),

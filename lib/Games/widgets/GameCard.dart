@@ -28,7 +28,7 @@ class GameCard extends StatelessWidget {
       },
       child: Container(
         width: double.infinity,
-        height: 210,
+        height: 220,
         child: Card(
           color: Color(color),
           clipBehavior: Clip.antiAliasWithSaveLayer,
