@@ -29,7 +29,7 @@ class Games extends StatelessWidget {
       body: Center(
         child: Container(
           height: MediaQuery.of(context).size.height * .8,
-          width: MediaQuery.of(context).size.width * .85,
+          width: MediaQuery.of(context).size.width * .83,
           decoration: BoxDecoration(
               boxShadow: const [
                 BoxShadow(

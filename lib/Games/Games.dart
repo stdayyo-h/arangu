@@ -63,12 +63,12 @@ class GamesPage extends StatelessWidget {
                 para: 'new game',
                 color: 0xff5AC671),
             GameCard(
-                text: 'Visual crossword',
+                text: 'Craft Manager',
                 img: 'assets/images/game2.png',
                 para: 'new game',
                 color: 0xffFF61A3),
             GameCard(
-                text: 'Visual crossword',
+                text: 'Art Works',
                 img: 'assets/images/game3.png',
                 para: 'new game',
                 color: 0xffE3B337),
