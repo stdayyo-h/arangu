@@ -11,6 +11,14 @@ Arangu is a mobile application that aims to support small-scale businesses and a
 5. A twitter bot tweets new events
 6. App notifications to user.
 
+### Additional features
+- Additional Features
+- Review, Comment and Like.
+- Save your favorites
+- Read more in Discover
+- Virtual Gallery Tour
+- Games and Art Selfie
+
 ### Prerequisites
 
 To run the application, you need to have the following software installed on your computer:
