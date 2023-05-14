@@ -39,3 +39,11 @@ To run the application, you need to have the following software installed on you
 
 - Flutter
 - Django
+
+## Team Members
+
+- [Ashwin Binu Abraham](https://github.com/4Ashwin)
+- [Muhammed](https://github.com/muhammed-mizaj)
+- [Asher Mathews Shaji](https://github.com/Asher-MS)
+- [Almira Asif Khan](https://github.com/AlmiraKhan)
+- [Fathima Nooha Kottangodan](https://github.com/nooha01)
